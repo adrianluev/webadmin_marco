@@ -1,0 +1,17 @@
+[
+    {
+        "display_name": "Exposiciones",
+        "route": "/exposiciones",
+        "icon": "bx bx-paint"
+    },
+    {
+        "display_name": "Agenda",
+        "route": "/costumers",
+        "icon": "bx bx-calendar"
+    },
+    {
+        "display_name": "settings",
+        "route": "/",
+        "icon": "bx bx-cog"
+    }
+]
