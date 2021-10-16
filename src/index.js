@@ -13,7 +13,7 @@ document.title = 'MARCO Admin'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Layout />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );

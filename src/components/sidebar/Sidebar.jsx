@@ -8,6 +8,11 @@ import logo from '../../assets/images/marcologo.png'
 
 import sidebar_items from '../../assets/JsonData/sidebar_routes.json'
 
+import UserStore from '../../stores/UserStore'
+// import { Button } from 'react-bootstrap'
+
+import SubmitButton from '../../pages/SubmitButton'
+
 
 
 const SidebarItem = props => {
@@ -47,7 +52,7 @@ const Sidebar = props => {
                 ))
             }
             <div className="login-name">
-                Logged in as: Adrian Luevanos
+                Logged in as: {UserStore.username} BOTON
             </div>
         </div>
     )
