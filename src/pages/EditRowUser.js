@@ -7,10 +7,10 @@ const EditRowUser = ({usuario, handleCancelClick, handleSaveClick, editUsuarioDa
     return (
         <tr>
             <td>
-                <input type="text" required="required" placeholder="Enter username" name="username" value={editUsuarioData.username} onChange={handleEditFormChange} />
+            <input type="text" required="required" placeholder="Enter username" name="username" value={editUsuarioData.username}  disabled="true"/>
             </td>
             <td>
-                <input type="text" required="required" placeholder="Enter Date" name="usertype" onChange={handleEditFormChange} value={editUsuarioData.usertype}/>
+                <input type="text" required="required" placeholder="Enter UserType" name="usertype" onChange={handleEditFormChange} value={editUsuarioData.usertype}/>
             </td>
             <td className="acciones">
                 <input type="button" value="Save" className="edit" onClick={(event) => handleSaveClick(event)}/>

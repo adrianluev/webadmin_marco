@@ -60,10 +60,20 @@ class LoginForm extends React.Component {
                     password: this.state.password
                 })
             });
+
+            let use = await fetch('http://100.24.228.237:10023/users/'+this.state.username, {
+                method: 'get',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+            });
             
             let result = await res.json();
-            console.log(result);
-            if(result.message == "token") {
+            let user = await use.json();
+            console.log(user.user.usertype[0]);
+            if (result.message == "token" && user.user.usertype[0] == "admin") {
                 UserStore.isLoggedIn = true;
                 UserStore.username = this.state.username;
             }

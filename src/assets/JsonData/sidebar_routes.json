@@ -1,9 +1,5 @@
 [
-    {
-        "display_name": "Exposiciones",
-        "route": "/exposiciones",
-        "icon": "bx bx-paint"
-    },
+    
     {
         "display_name": "Agenda",
         "route": "/agenda",

@@ -75,7 +75,7 @@ const Costumers = () => {
         usuario: "",
         fecha: "",
         hora: "",
-        turno: "",
+        turno: 0,
         n_personas: ""
     });
     
@@ -176,6 +176,27 @@ const Costumers = () => {
 
     //     }
     // }
+    const deleteCita =
+        (cita) => {
+            try {
+                let res = fetch('http://100.24.228.237:10023/users/delete/' + cita._id, {
+                    method: 'delete',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*'
+                    },
+                });
+                // let result = res.json();
+
+
+
+            }
+            catch (e) {
+                console.log(e);
+            }
+            alert("Cita Deleted");
+        }
 
     return (
         // <form>
@@ -191,7 +212,6 @@ const Costumers = () => {
                         <th>Fecha</th>
                         <th>Hora de Visita</th>
                         <th>Turno</th>
-                        <th>Numero de Personas</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>

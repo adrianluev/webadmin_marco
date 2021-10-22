@@ -32,6 +32,10 @@ const SidebarItem = props => {
     )
 }
 
+const doLogout = () => {
+    UserStore.isLoggedIn = false;
+}
+
 
 
 const Sidebar = props => {
@@ -55,7 +59,8 @@ const Sidebar = props => {
                 ))
             }
             <div className="login-name">
-                Logged in as: {UserStore.username} BOTON
+                Logged in as: {UserStore.username} 
+                <input type="button" value="Logout" className="logout" onClick={doLogout}/> 
             </div>
         </div>
     )

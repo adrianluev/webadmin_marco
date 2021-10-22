@@ -6,7 +6,7 @@ import './readRow.css';
 
 export const ReadRowUser = ({usuario, handleEditClick, handleDeleteClick, which, sUser}) => {
 
-    if (((which == 1) || (which == 2 && usuario.usertype == "user") || (which == 3 && usuario.usertype == "admin")) && sUser.toLowerCase() == usuario.username.substr(0, sUser.length).toLowerCase()){
+    if (((which == 1) || (which == 2 && (usuario.usertype == "usuario" || usuario.usertype == "user")) || (which == 3 && usuario.usertype == "admin")) && sUser.toLowerCase() == usuario.username.substr(0, sUser.length).toLowerCase()){
     return (
         <tr>
             <td>{usuario.username}</td>
