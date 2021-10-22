@@ -6,6 +6,7 @@ import SubmitButton from "./SubmitButton";
 import { createConnection } from "mongoose";
 import './loginForm.css'
 
+
 class LoginForm extends React.Component {
 
     
@@ -35,6 +36,8 @@ class LoginForm extends React.Component {
     }
 
     async doLogin() {
+        // console.log(this.state.username);
+        // console.log(this.state.password);
         if(!this.state.username) {
             return;
         }
@@ -45,26 +48,28 @@ class LoginForm extends React.Component {
             buttonDisabled: true
         })
         try {
-            let res = await fetch('/login', {
+            let res = await fetch('http://100.24.228.237:10023/users/login', {
                 method: 'post',
                 headers: {
                     'Accept' : 'application/json',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
                 },
                 body: JSON.stringify({
                     username: this.state.username,
                     password: this.state.password
                 })
             });
-
+            
             let result = await res.json();
-            if(result && result.success) {
+            console.log(result);
+            if(result.message == "token") {
                 UserStore.isLoggedIn = true;
-                UserStore.username = result.username;
+                UserStore.username = this.state.username;
             }
-            else if(result && result.success === false) {
+            else{
                 this.resetForm();
-                alert(result.msg);
+                alert("Wrong Credentials");
             }
         }
         catch(e){

@@ -3,17 +3,19 @@ import React from 'react'
 import { Route, Switch} from 'react-router-dom'
 
 import Dashboard from '../pages/Dashboard'
-import Costumers from '../pages/Costumers'
+import Agenda from '../pages/Agenda'
 import Login from '../pages/Login'
+import Usuarios from '../pages/Usuarios'
 
 
 
 const Routes = () => {
     return (
         <Switch>
+            <Route path='/usuarios' component={Usuarios} />
             <Route path = '/exposiciones' exact component={Dashboard}/>
-            <Route path = '/costumers' component={Costumers}/>
-            <Route path='/login' component={Login} />
+            <Route path = '/agenda' component={Agenda}/>
+            <Route path='/' exact component={Login} />
         </Switch>
     )
 }

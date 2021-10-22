@@ -13,6 +13,8 @@ import UserStore from '../../stores/UserStore'
 
 import SubmitButton from '../../pages/SubmitButton'
 
+import { Observer } from 'mobx-react-lite'
+
 
 
 const SidebarItem = props => {
@@ -34,6 +36,7 @@ const SidebarItem = props => {
 
 const Sidebar = props => {
     const activeItem = sidebar_items.findIndex(item => item.route === props.location.pathname)
+    console.log(UserStore.username);
 
     return (
         <div className="sidebar">

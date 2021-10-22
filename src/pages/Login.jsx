@@ -108,7 +108,7 @@ class Login extends React.Component {
                 return (
                     <div className="page" >
                         <style>{'body { background-color: #d3d3d3; }'}</style>
-                    <Router>
+                    {/* <Router> */}
                         
                         {/* <div>
                             <div className="logo">
@@ -135,7 +135,7 @@ class Login extends React.Component {
                             <LoginForm></LoginForm>
                         </div>
                         
-                    </Router>
+                    {/* </Router> */}
                     </div>
                 )
             }
@@ -144,4 +144,4 @@ class Login extends React.Component {
     }
 }
 
-export default observer(Login);
+export default observer(Login); // si pongo observer se queda en la pagina de login

@@ -6,12 +6,12 @@
     },
     {
         "display_name": "Agenda",
-        "route": "/costumers",
+        "route": "/agenda",
         "icon": "bx bx-calendar"
     },
     {
-        "display_name": "settings",
-        "route": "/",
-        "icon": "bx bx-cog"
+        "display_name": "Usuarios",
+        "route": "/usuarios",
+        "icon": "bx bx-user"
     }
 ]
